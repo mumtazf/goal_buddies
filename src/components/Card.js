@@ -9,6 +9,7 @@ const Card = (props) =>  {
 
  // console.log(props)
   const [count, setCount] = useState(props.upvote)
+  console.log(props)
 
   const updateCount = async (event) => {
     event.preventDefault();

@@ -2,6 +2,7 @@
   "name": "bet1.0",
   "version": "0.1.0",
   "private": true,
+  "dotenv":true,
   "dependencies": {
     "@supabase/supabase-js": "^2.20.0",
     "@testing-library/jest-dom": "^5.16.5",

@@ -17,15 +17,31 @@ const ReadPosts = (props) => {
         setShowFilter(props.filter);
        
     }, [props.data]);
+
+    useEffect(()=> {
+        console.log('sorted posts:', sortedPosts)
+    }, [sortedPosts])
     
     const handleTimeFilter = (event) => {
         setTimeFilter(true);
         const sort = posts.slice().sort((a,b) => (a.time < b.time ? 1:-1))
         setSortedPosts(sort);
+
+        console.log('in handletime filter')
+        console.log(sort)
+        setSortedPosts(sort); 
+        console.log("my sorted posts are:")   
+        console.log(sortedPosts)
     }
 
     const handleUpvoteFilter = (event) => {
         setUpvoteFilter(true);
+        const sort = posts.slice().sort((a,b) => (a.upvote < b.upvote ? 1:-1))
+        console.log('in upvote filter')
+        console.log(sort)
+        setSortedPosts(sort); 
+        console.log("my sorted posts are:")   
+        console.log(sortedPosts)
     }
 
     const handleResetFilter = (event) => {
@@ -57,7 +73,9 @@ const ReadPosts = (props) => {
                         <Card id={post.id} title={post.title} author={post.author} description={post.description} time = {post.time.substring(0,10)} upvote = {post.upvote}/>
                          )   
                     ) : upvoteFilter ? (
-                        <div> </div>
+                        sortedPosts.map((post,index) => 
+                        <Card id={post.id} title={post.title} author={post.author} description={post.description} time = {post.time.substring(0,10)} upvote = {post.upvote}/>
+                         )                    
                     ) : (
                         posts.map((post,index) => 
                         <Card id={post.id} title={post.title} author={post.author} description={post.description} time = {post.time.substring(0,10)} upvote = {post.upvote}/>

@@ -81,8 +81,8 @@ button:hover {
 .filterDiv{
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  width: 12em;
+  gap: 20px;
+  width: 20em;
   height: 2em;
 }
 
