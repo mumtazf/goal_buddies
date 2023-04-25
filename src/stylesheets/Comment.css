@@ -1,0 +1,23 @@
+.user_card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.6em;
+    background-color: antiquewhite;
+}
+
+.comment_time{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.comment_author{
+    display: flex;
+    justify-self: flex-start;
+
+}
+
+.comment_comment{
+    font-size: 0.8em;
+}
+

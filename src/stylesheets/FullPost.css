@@ -1,0 +1,25 @@
+.fullpost{
+    background-color: rgba(246, 241, 241, 0.795);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px;
+    padding: 2em;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between ;
+    font-size: 0.8em;
+}
+
+.point{
+    font-size: 0.8em;
+}
+
+.title{
+    color: rgb(99, 177, 203);
+    font-size: 1.5em;
+}
+    
